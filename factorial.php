@@ -12,13 +12,11 @@ if(isset($_POST['number'])) {
 	$fact = $_POST['number'];
 
 	function factorial($n) {
-		if($n < 0) {
+		if ($n < 0) {
 			throw(new \RangeException("n cannot be a negative number, please try a larger number"));
-		}
-		if($n > 20) {
-			throw(new \RangeException("n cannot be over 20, please try a lower number"))
-		}
-		if($n == 0) {
+		} elseif ($n > 20) {
+			throw(new \OverflowException("n cannot be over 20, please try a lower number"));
+		} elseif ($n == 0) {
 			return 1;
 		} else {
 			return $n * factorial($n - 1);
@@ -30,7 +28,7 @@ if(isset($_POST['number'])) {
 <html>
 	<body>
 		<form action="" method="POST">
-			<label for="number">Enter a number to factorize (Btn 0 - 170): </label>
+			<label for="number">Enter a number to factorize (Btn 0 - 20): </label>
 			<br /><br />
 			<input type="text" name="number" id="number" />
 			<br /><br />
