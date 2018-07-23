@@ -35,7 +35,7 @@ if(isset($_POST['number'])) {
 <html>
 	<body>
 		<form action="" method="POST">
-			<label for="number">Enter a number to factorize (Btn 0 - 20): </label>
+			<label for="number">Enter a number to factorialize (Btn 0 - 20): </label>
 			<br /><br />
 			<input type="text" name="number" id="number" />
 			<br /><br />
