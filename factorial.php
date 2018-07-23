@@ -18,7 +18,7 @@ if(isset($_POST['number'])) {
 	 * @throws \OverflowException if $n is > 20
 	 * @throws \TypeError if n is not an int
 	 */
-	function factorial(int $n) {
+	function factorial(int $n): int {
 		if ($n < 0) {
 			throw(new \RangeException("n cannot be a negative number, please try a larger number"));
 		} elseif ($n > 20) {
