@@ -22,14 +22,27 @@ if(isset($_POST['number'])) {
 			throw(new \RangeException("n cannot be a negative number, please try a larger number"));
 		} elseif ($n > 20) {
 			throw(new \RangeException("n cannot be over 20, please try a lower number"));
-		} elseif ($n == 0) {
+		} elseif ($n === 0) {
 			return 1;
 		} else {
 			return $n * factorial($n - 1);
 		}
 	}
+
 	$ans = factorial($fact);
+
 }
+
+/**
+ * Variant for loop
+ * function factorial(int $n): int {
+ * $answer = 1;
+ * for($i = 1; $i<= $n; $i++) {
+ * $answer = $answer * $i;
+ * }
+ * return $answer;
+ * }
+ */
 ?>
 <html>
 	<body>
